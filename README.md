@@ -22,16 +22,9 @@ PATK/
 │   └── Pred/          # Prediction datasets
 ├── model/             # Model definitions
 ├── trainer/           # Training and testing scripts
-├── V2_logs_ETTh1/     # Training logs for ETTh1 dataset
-├── V2_logs_SleepEEG/  # Training logs for SleepEEG dataset
-├── V2_pred_logs_ETTh1/ # Prediction logs for ETTh1 dataset
-├── saved_models_pre_train_ETTh1/    # Pre-trained models for ETTh1
-├── saved_models_pre_train_SleepEEG/ # Pre-trained models for SleepEEG
 ├── main_cls.py        # Main script for classification tasks
-├── main_pred.py       # Main script for prediction tasks
-├── main_baseline.py   # Baseline model script
 ├── contrastive_loss_V2.py # Contrastive loss function
-└── 实验数据汇总.xlsx   # Experiment results summary
+
 ```
 
 ## Installation Instructions
@@ -70,20 +63,6 @@ python main_cls.py --scene pre-train --pre_dataset_name SleepEEG --EPOCH 10 --ba
 
 ```bash
 python main_cls.py --scene fine-tune --pre_dataset_name SleepEEG --tune_dataset_name ECG --EPOCH 10
-```
-
-### Prediction Task
-
-#### Pre-training
-
-```bash
-python main_pred.py --scene pre-train --pre_dataset_name ETTh1 --EPOCH 10 --batch_size 8
-```
-
-#### Fine-tuning
-
-```bash
-python main_pred.py --scene fine-tune --pre_dataset_name ETTh1 --tune_dataset_name ETTh1 --EPOCH 10
 ```
 
 ## Main Parameter Description
@@ -144,11 +123,6 @@ python main_pred.py --scene fine-tune --pre_dataset_name ETTh1 --tune_dataset_na
 - **illness**: Disease incidence data
 - **weather**: Meteorological data
 
-## Experiment Results
-
-Experiment results are summarized in the `实验数据汇总.xlsx` file, including performance metrics of different models on various datasets.
-
-## Example Code
 
 ### Classification Task Example
 
@@ -158,16 +132,6 @@ python main_cls.py --scene pre-train --pre_dataset_name SleepEEG --EPOCH 10
 
 # Fine-tuning
 python main_cls.py --scene fine-tune --pre_dataset_name SleepEEG --tune_dataset_name ECG --EPOCH 10
-```
-
-### Prediction Task Example
-
-```python
-# Pre-training
-python main_pred.py --scene pre-train --pre_dataset_name ETTh1 --EPOCH 10
-
-# Fine-tuning
-python main_pred.py --scene fine-tune --pre_dataset_name ETTh1 --tune_dataset_name ETTh1 --EPOCH 10
 ```
 
 ## Notes
