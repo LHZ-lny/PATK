@@ -1,4 +1,4 @@
-# PATK: Time Series Classification and Prediction Framework
+# PATK: Dynamic Semantic Tokenization for Time Series via Elastic Sampling on Physics-aware Perception
 
 ## Project Introduction
 
