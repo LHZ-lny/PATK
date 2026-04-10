@@ -19,10 +19,9 @@ PATK/
 ├── data_load/         # Data loading and preprocessing module
 ├── dataset/           # Dataset directory
 │   ├── Cls/           # Classification datasets
-│   └── Pred/          # Prediction datasets
 ├── model/             # Model definitions
 ├── trainer/           # Training and testing scripts
-├── main_cls.py        # Main script for classification tasks
+├── main_cls.py        # Main script
 ├── contrastive_loss_V2.py # Contrastive loss function
 
 ```
